@@ -48,7 +48,7 @@
         <!-- Main Project Video -->
         <div class="project-main-video-container">
             <video class="project-main-video" autoplay muted loop playsinline>
-                <source src="" type="video/mp4">
+                <source src="media/Modular_City_project_page.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
 
@@ -62,8 +62,11 @@
             <!-- About Card -->
             <div class="project-detail-card">
                 <h3 class="detail-card-header">About</h3>
-                <p class="detail-card-text">This project was created on the theme of "transmediation". This text-based adventure game is based on Ray Bradbury's story "The Veldt," which is a cautionary tale about a futuristic family living in a fully automated house that caters to their every need.<br>
-                    The user follows the events of the story from the perspective of the house via a retro computer terminal, while the computer sends the user queries to which the user must respond in order to proceed. In this project, I was in charge of constructing the website and all the interactions, rewriting the story, audio editing and implementation, and putting it live on the web.</p>
+                <p class="detail-card-text">
+                    This project builds a modular metropolis using Processing Java. Static layouts were an option, but I went with a randomly generated approach with a rustic vibe.<br>
+                    The vertex coordinates of each object had to be declared in code.
+                    In order to increase performance, I implemented render distance and wrote code that determines whether a field already has a well nearby before adding one.
+                </p>
             </div>
 
             <!-- Project Info Card -->
@@ -85,13 +88,33 @@
         <h2 class="summary-header">Summary</h2>
         <div class="summary-text-container">
             <p class="summary-text">
-                project process
+                For the layout the program starts by setting up the grid, defining which lines and columns will be roads and rivers, sets bridges at the intersections, making sure both sides are the same height, and then defines the rest of the cells, most importantly the fields and wells so that each field is necessarily next to at least 1 well.
             </p>
             <p class="summary-text">
-                project process
+                As well ass the features mentioned above I also implemented WASD movement and a day and night cycle, this was achieved by a directional light rotates around the city with a shift in color
             </p>
             <p class="summary-text">
-                project process
+                I also ended up making my own pixel art textures for the objects, bellow I have some comparison images between no render distance nor textures and the final version
+            </p>
+
+            <div class="project-examples-content">
+                <div class="project-examples-grid">
+                    <div class="project-example-item">
+                        <img src="media/Modular_City_no_texture_example1.png" alt="no_textures1" class="example-image">
+                    </div>
+                    <div class="project-example-item">
+                        <img src="media/Modular_City_no_texture_example2.png" alt="no_textures2" class="example-image">
+                    </div>
+                    <div class="project-example-item">
+                        <img src="media/Modular_City_textured_example1.png" alt="textures1" class="example-image">
+                    </div>
+                    <div class="project-example-item">
+                        <img src="media/Modular_City_textured_example2.png" alt="textures2" class="example-image">
+                    </div>
+                </div>
+            </div>
+            <p class="summary-text">
+                Video showcase with movement
             </p>
         </div>
     </div>
@@ -102,16 +125,7 @@
     <div class="project-examples-content">
         <div class="project-examples-grid">
             <div class="project-example-item">
-                <svg class="play-icon" viewBox="0 0 100 100" fill="none">
-                    <circle cx="50" cy="50" r="40" fill="white" opacity="0.8"/>
-                    <path d="M40 30 L40 70 L70 50 Z" fill="#BFBFBF"/>
-                </svg>
-            </div>
-            <div class="project-example-item">
-                <svg class="play-icon" viewBox="0 0 100 100" fill="none">
-                    <circle cx="50" cy="50" r="40" fill="white" opacity="0.8"/>
-                    <path d="M40 30 L40 70 L70 50 Z" fill="#BFBFBF"/>
-                </svg>
+                <video src="media/Modular_City_showcase.mp4" class="example-video" controls></video>
             </div>
 
         </div>
