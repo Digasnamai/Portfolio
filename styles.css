@@ -502,7 +502,64 @@ body {
     background-color: #121212;
 }
 
-/* Responsive Design */
+/* Carousel Specific Styles */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 30px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Forces the "locking" effect */
+    scroll-behavior: smooth;
+    padding-bottom: 15px; /* Space for the scrollbar if visible */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity; /* Proximity feels better for varying widths */
+    padding-bottom: 20px;
+    align-items: center;           /* Keeps images of different heights centered vertically */
+}
+
+.carousel-track .example-image {
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: pixelated;       /* Chrome, Safari, Edge */
+}
+
+.carousel-item {
+    flex: 0 0 auto;        /* Allows the item to take only the width it needs */
+    height: 400px;         /* Set the desired height for your carousel here */
+    scroll-snap-align: start;
+    aspect-ratio: auto;    /* Removes the 16/9 ratio */
+    background-color: transparent;
+}
+
+.carousel-item .example-image {
+    height: 100%;
+    width: auto;           /* Crucial: prevents horizontal stretching */
+    object-fit: contain;   /* Shows the full image without cropping */
+    display: block;
+}
+
+/* Tablet/Desktop: Show 2 images at once */
+@media (min-width: 768px) {
+    .carousel-item {
+        flex: 0 0 calc(50% - 15px); /* Shows two items with gap considered */
+    }
+}
+
 @media (max-width: 1280px) {
     .header-content,
     .hero-content,
@@ -593,5 +650,9 @@ body {
 
     .summary-text {
         font-size: 1.125rem;
+    }
+
+    .carousel-item {
+        height: 250px; /* Shorter height for mobile screens */
     }
 }
