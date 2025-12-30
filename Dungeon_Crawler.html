@@ -48,7 +48,7 @@
         <!-- Main Project Video -->
         <div class="project-main-video-container">
             <video class="project-main-video" autoplay muted loop playsinline>
-                <source src="" type="video/mp4">
+                <source src="media/Dungeon_Crawler_main.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
 
@@ -63,7 +63,8 @@
             <div class="project-detail-card">
                 <h3 class="detail-card-header">About</h3>
                 <p class="detail-card-text">
-                    This project features a randomly generated 3D dungeon with first person mobility, ready to be customised with textures.
+                    This project features a randomly generated 3D dungeon with first person mobility, ready to be customised with textures. <br>
+                    The script utilizes recursive backtracking to generate a grid-based dungeon with a randomized critical path, branching corridors, and room types. Once the layout is finalized, it instantiates 3D room scenes, spawning hallways and walls based on adjacent cells.
                 </p>
             </div>
 
@@ -87,48 +88,22 @@
         <h2 class="summary-header">Summary</h2>
         <div class="summary-text-container">
             <p class="summary-text">
-                For the layout the program starts by setting up the grid, defining which lines and columns will be roads and rivers, sets bridges at the intersections, making sure both sides are the same height, and then defines the rest of the cells, most importantly the fields and wells so that each field is necessarily next to at least 1 well.
+                As well as the features described above I also implemented a dithering and color quantization shader from Godot Shaders since I liked the aesthetic and wanted to learn how to implement it.
             </p>
             <p class="summary-text">
-                As well ass the features mentioned above I also implemented WASD movement and a day and night cycle, this was achieved by a directional light rotates around the city with a shift in color
+                Below are some video showcases, one of them featuring a bird's eye view
             </p>
-            <p class="summary-text">
-                I also ended up making my own pixel art textures for the objects, bellow I have some comparison images between no render distance nor textures and the final version
-            </p>
-
             <div class="project-examples-content">
                 <div class="project-examples-grid">
                     <div class="project-example-item">
-                        <img src="media/Modular_City_no_texture_example1.png" alt="no_textures1" class="example-image">
+                        <video src="media/Dungeon_Crawler_showcase1.mp4" class="example-video" controls></video>
                     </div>
                     <div class="project-example-item">
-                        <img src="media/Modular_City_no_texture_example2.png" alt="no_textures2" class="example-image">
-                    </div>
-                    <div class="project-example-item">
-                        <img src="media/Modular_City_textured_example1.png" alt="textures1" class="example-image">
-                    </div>
-                    <div class="project-example-item">
-                        <img src="media/Modular_City_textured_example2.png" alt="textures2" class="example-image">
+                        <video src="media/Dungeon_Crawler_showcase2.mp4" class="example-video" controls></video>
                     </div>
                 </div>
             </div>
-            <p class="summary-text">
-                Video showcase with movement
-            </p>
         </div>
+
     </div>
 </section>
-
-<!-- Project Examples Grid -->
-<section class="project-examples-section">
-    <div class="project-examples-content">
-        <div class="project-examples-grid">
-            <div class="project-example-item">
-                <video src="" class="example-video" controls></video>
-            </div>
-
-        </div>
-    </div>
-</section>
-</body>
-</html>
