@@ -34,7 +34,6 @@
       </a>
       </div>
     </div>
-  </div>
 </header>
 
 <!-- Project Section -->
@@ -49,11 +48,10 @@
     </a>
 
     <!-- Main Project Video -->
-    <div class="project-main-video-container">
-      <video class="project-main-video" autoplay muted loop playsinline>
-        <source src="" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <div class="pixel-art-main-container">
+      <div class="pixel-art-item">
+        <img src="media/Pixel_Art_Showcase/Jonah_overworld.gif" alt="Showcase" class="pixel-art-render">
+      </div>
 
       <div class="project-main-video-name-container">
         <h3 class="project-main-video-name">Pixel Art</h3>
@@ -66,7 +64,7 @@
       <div class="project-detail-card">
         <h3 class="detail-card-header">About</h3>
         <p class="detail-card-text">
-          A collection of pixel art i've done over the years for my game projects
+          A collection of pixel art I've done over the years for my games
         </p>
       </div>
 
@@ -81,16 +79,64 @@
     <div class="carousel-container">
       <div class="carousel-track">
         <div class="project-example-item carousel-item">
-          <img src="" alt="Pixel Art 1" class="example-image">
+          <img src="media/Pixel_Art_Showcase/Rabid_dog.gif" alt="Pixel Art 1" class="example-image">
         </div>
         <div class="project-example-item carousel-item">
-          <img src="" alt="Pixel Art 2" class="example-image">
+          <img src="media/Pixel_Art_Showcase/rabid_dog_portrait.png" alt="Pixel Art 2" class="example-image">
         </div>
         <div class="project-example-item carousel-item">
-          <img src="" alt="Pixel Art 3" class="example-image">
+          <img src="media/Pixel_Art_Showcase/brigand_boss.gif" alt="Pixel Art 3" class="example-image">
         </div>
         <div class="project-example-item carousel-item">
-          <img src="" alt="Pixel Art 4" class="example-image">
+          <img src="media/Pixel_Art_Showcase/brigand_boss_portrait.png" alt="Pixel Art 4" class="example-image">
+        </div>
+        <div class="project-example-item carousel-item">
+          <img src="media/Pixel_Art_Showcase/arsonist.gif" alt="Pixel Art 5" class="example-image">
+        </div>
+        <div class="project-example-item carousel-item">
+          <img src="media/Pixel_Art_Showcase/arsonist_portrait.png" alt="Pixel Art 6" class="example-image">
+        </div>
+        <div class="project-example-item carousel-item">
+          <img src="media/Pixel_Art_Showcase/Luke.gif" alt="Pixel Art 7" class="example-image">
+        </div>
+        <div class="project-example-item carousel-item">
+          <img src="media/Pixel_Art_Showcase/Luke_portrait.png" alt="Pixel Art 8" class="example-image">
+        </div>
+        <div class="project-example-item carousel-item">
+          <img src="media/Pixel_Art_Showcase/edward_portrait.png" alt="Pixel Art 9" class="example-image">
+        </div>
+        <div class="project-example-item carousel-item">
+          <img src="media/Pixel_Art_Showcase/Natasha_portrait.png" alt="Pixel Art 10" class="example-image">
+        </div>
+        <div class="project-example-item carousel-item">
+          <img src="media/Pixel_Art_Showcase/Jonah_overworld.gif" alt="Pixel Art 11" class="example-image">
+        </div>
+        <div class="project-example-item carousel-item">
+          <img src="media/Pixel_Art_Showcase/Jonah.gif" alt="Pixel Art 12" class="example-image">
+        </div>
+        <div class="project-example-item carousel-item">
+          <img src="media/Pixel_Art_Showcase/Maera.png" alt="Pixel Art 13" class="example-image">
+        </div>
+        <div class="project-example-item carousel-item">
+          <img src="media/Pixel_Art_Showcase/George.png" alt="Pixel Art 14" class="example-image">
+        </div>
+        <div class="project-example-item carousel-item">
+          <img src="media/Pixel_Art_Showcase/Dorothy.png" alt="Pixel Art 15" class="example-image">
+        </div>
+        <div class="project-example-item carousel-item">
+          <img src="media/Pixel_Art_Showcase/Dwayne.png" alt="Pixel Art 16" class="example-image">
+        </div>
+        <div class="project-example-item carousel-item">
+          <img src="media/Pixel_Art_Showcase/Starting%20House.png" alt="Pixel Art 17" class="example-image">
+        </div>
+        <div class="project-example-item carousel-item">
+          <img src="media/Pixel_Art_Showcase/Tilemap_example.png" alt="Pixel Art 18" class="example-image">
+        </div>
+        <div class="project-example-item carousel-item">
+          <img src="media/Pixel_Art_Showcase/background1.png" alt="Pixel Art 19" class="example-image">
+        </div>
+        <div class="project-example-item carousel-item">
+          <img src="media/Pixel_Art_Showcase/background2.png" alt="Pixel Art 20" class="example-image">
         </div>
       </div>
 
@@ -101,6 +147,23 @@
   </div>
 </section>
 
+<script>
+  const track = document.querySelector('.carousel-track');
+
+  track.addEventListener('wheel', (e) => {
+    // Only intercept if it's a vertical scroll attempt on desktop
+    if (e.deltaY !== 0) {
+      // Check if the device has a fine pointer (like a mouse)
+      if (window.matchMedia("(pointer: fine)").matches) {
+        e.preventDefault();
+        track.scrollBy({
+          left: e.deltaY * 2,
+          behavior: 'auto'
+        });
+      }
+    }
+  }, { passive: false });
+</script>
 
 </body>
 </html>
